@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>front_end.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #6aab73;}
+.s4 { color: #7a7e85;}
+.s5 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+front_end.py</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">requests</span>
+
+
+<span class="s0">def </span><span class="s1">test_frontend</span><span class="s2">():</span>
+    <span class="s1">frontend_url </span><span class="s2">= </span><span class="s3">&quot;http://172.24.133.70:30850&quot;  </span><span class="s4"># Change if necessary</span>
+    <span class="s1">response </span><span class="s2">= </span><span class="s1">requests</span><span class="s2">.</span><span class="s1">get</span><span class="s2">(</span><span class="s1">frontend_url</span><span class="s2">)</span>
+
+    <span class="s0">assert </span><span class="s1">response</span><span class="s2">.</span><span class="s1">status_code </span><span class="s2">== </span><span class="s5">200</span>
+    <span class="s0">assert </span><span class="s3">&quot;Hello from the Backend!&quot; </span><span class="s0">in </span><span class="s1">response</span><span class="s2">.</span><span class="s1">text  </span><span class="s4"># Change to your expected message</span>
+
+    <span class="s1">print</span><span class="s2">(</span><span class="s3">&quot;test executed succesfully&quot;</span><span class="s2">)</span>
+
+
+<span class="s0">if </span><span class="s1">__name__ </span><span class="s2">== </span><span class="s3">&quot;__main__&quot;</span><span class="s2">:</span>
+    <span class="s1">test_frontend</span><span class="s2">()</span></pre>
+</body>
+</html>
